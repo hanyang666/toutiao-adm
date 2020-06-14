@@ -1,4 +1,4 @@
-# toutiao-admin
+# toutiao-publish-admin
 
 ## Project setup
 ```

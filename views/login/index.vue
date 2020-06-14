@@ -83,6 +83,9 @@ export default {
         ],
         agree: [
           {
+            // 自定义校验规则：https://element.eleme.cn/#/zh-CN/component/form#zi-ding-yi-xiao-yan-gui-ze
+            // 验证通过：callback()
+            // 验证失败：callback(new Error('错误消息'))
             validator: (rule, value, callback) => {
               if (value) {
                 callback()
@@ -122,6 +125,12 @@ export default {
     login () {
       // 开启登陆中 loading...
       this.loginLoading = true
+
+      // 对于代码中的请求操作
+      // 1、接口请求可能需要重用
+      // 2、实际工作中，接口非常容易变动，改起来麻烦
+      // 我们建议的做法是把所有的请求都封装成函数然后统一的组织到模块中进行管理
+      // 这样做的好处就是：管理维护更方便，也好重用
       login(this.user).then(res => {
         console.log(res)
 
