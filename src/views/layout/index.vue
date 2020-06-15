@@ -1,7 +1,10 @@
 <template>
   <el-container class="layout-container">
     <el-aside class="aside" width="auto">
-      <app-aside class="aside-menu" :is-collapse="isCollapse" />
+      <app-aside
+        class="aside-menu"
+        :is-collapse="isCollapse"
+      />
     </el-aside>
     <el-container>
       <el-header class="header">
@@ -9,7 +12,7 @@
           <i
             :class="{
               'el-icon-s-fold': isCollapse,
-              'el-icon-s-unfold': !iscollapse
+              'el-icon-s-unfold': !isCollapse
             }"
             @click="isCollapse = !isCollapse"
           ></i>

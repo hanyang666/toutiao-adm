@@ -130,13 +130,11 @@ export default {
           message: '登录成功',
           type: 'success'
         })
-
         // 关闭 loading
         this.loginLoading = false
-
+        window.localStorage.setItem('user', JSON.stringify(res.data.data))
         // 跳转到首页
         // this.$router.push('/')
-
         this.$router.push({
           name: 'home'
         })
