@@ -31,7 +31,6 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  console.log('页面进来了')
   const user = JSON.parse(window.localStorage.getItem('user'))
   // 校验登录状态
   if (to.path !== '/login') {
