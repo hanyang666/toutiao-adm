@@ -110,10 +110,9 @@ export default {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #ccc;
-  // background-color: #b3c0d1;
 }
 .main {
-  background-color: #e9eef3;
+  background-color: #fff;
 }
 .avatar-wrap {
   display: flex;
